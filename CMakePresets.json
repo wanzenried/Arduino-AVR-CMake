@@ -20,7 +20,7 @@
             "inherits": "MinSizeRel",
             "toolchainFile": "${sourceDir}/cmake/toolchain/mega.toolchain.cmake",
             "cacheVariables": {
-                "ARDUINO_PORT": "/dev/ttyACM0"
+                "PORT": "/dev/ttyACM0"
             }
         },
         {
@@ -28,7 +28,7 @@
             "inherits": "MinSizeRel",
             "toolchainFile": "${sourceDir}/cmake/toolchain/uno.toolchain.cmake",
             "cacheVariables": {
-                "ARDUINO_PORT": "/dev/ttyACM0"
+                "PORT": "/dev/ttyACM0"
             }
         },
         {
@@ -36,7 +36,7 @@
             "inherits": "MinSizeRel",
             "toolchainFile": "${sourceDir}/cmake/toolchain/leonardo.toolchain.cmake",
             "cacheVariables": {
-                "ARDUINO_PORT": "/dev/ttyACM0"
+                "PORT": "/dev/ttyACM0"
             }
         }
     ],

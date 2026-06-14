@@ -37,6 +37,6 @@ target_compile_options(${PROJECT_NAME} PRIVATE
 )
 arduino_avr_hex(${PROJECT_NAME})
 
-set(ARDUINO_PORT "/dev/ttyACM0"
+set(PORT "/dev/ttyACM0"
     CACHE STRING "The serial port for uploading using avrdude")
-arduino_avr_upload(${PROJECT_NAME} ${ARDUINO_PORT})
+arduino_avr_upload(${PROJECT_NAME} ${PORT})
