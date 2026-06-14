@@ -11,3 +11,8 @@ All dates in this file follow [ISO 8601](https://www.iso.org/iso-8601-date-and-t
 
 ### Added
 - Include Arduino bundled libraries ([#1](https://github.com/wanzenried/Arduino-AVR-CMake/pull/1))
+- Cmake Presets ([#2](https://github.com/wanzenried/Arduino-AVR-CMake/pull/2))
+
+### Changed
+- Bumped CMake required version to 3.25 ([#2](https://github.com/wanzenried/Arduino-AVR-CMake/pull/2))
+- Changed default generator to Ninja ([#2](https://github.com/wanzenried/Arduino-AVR-CMake/pull/2))
