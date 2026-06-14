@@ -12,20 +12,21 @@ Compile Arduino AVR programs using CMake.
    If this is not the case, change it now in `cmake/toolchain/avr.toolchain.cmake`.
 3. Configure the project using CMake by running the following command:
     ```sh
-    cmake -S. -Bbuild \
-        -D ARDUINO_PORT=/dev/ttyACM0 \
-        -D CMAKE_TOOLCHAIN_FILE=cmake/toolchain/uno.toolchain.cmake \
+    cmake --preset Uno \
+        -D PORT=/dev/ttyACM0 \
         -D CMAKE_BUILD_TYPE=MinSizeRel
     ```
-    Customize the port, toolchain file, and build type for your specific
+    Customize the port, board, and build type for your specific
     configuration.
+
+    The CMake configuration defaults to port `/dev/ttyACM0`, and building as `MinSizeRel`.
 4. Finally, build and upload the example “blink” program:
     ```sh
-    cmake --build build -j -t upload-blink
+    cmake --build --preset Uno --target upload-hex
     ```
     To compile the program without uploading, you can use 
     ```sh
-    cmake --build build -j -t blink
+    cmake --build --preset Uno
     ```
     If you're using an Arduino with a native USB interface (e.g. Leonardo),
     you'll have to press the reset button before uploading. You could 

@@ -1,7 +1,7 @@
 # Creates a target upload-target that uses avrdude to upload target.hex to the
 # given serial port.
 function(arduino_avr_upload target port)
-    add_custom_target(upload-${target}
+    add_custom_target(upload-hex
         COMMAND ${ARDUINO_AVRDUDE} 
             -C${ARDUINO_AVRDUDE_CONF}
             -p${ARDUINO_MCU}
@@ -11,5 +11,5 @@ function(arduino_avr_upload target port)
             -D
             "-Uflash:w:$<TARGET_FILE_BASE_NAME:${target}>.hex:i"
         USES_TERMINAL)
-    add_dependencies(upload-${target} ${target})
+    add_dependencies(upload-hex ${target})
 endfunction()
